@@ -31,7 +31,7 @@ func divide (num1:Int, num2:Int) -> Int {
     return num1 / num2
 }
 
-func math (num1:Int, num2:Int, op: (Int, Int) -> Int) -> Int {
+func mathOperation (num1:Int, num2:Int, op: (Int, Int) -> Int) -> Int {
     return op(num1, num2)
 }
 
@@ -66,10 +66,11 @@ func avgArray(numArray: [Int]) -> Int {
     return sum / numElements
 }
 
-func mathArray(numArray: [Int], op: ([Int]) -> Int) -> Int {
+
+//reduce function
+func reduce(numArray: [Int], op: ([Int]) -> Int, total: Int? = 0) -> Int {
     return op(numArray)
 }
-
 
 //Points
 func addPoints(point1: (x:Int, y:Int), point2: (x:Int, y:Int)) -> (Int, Int) {
